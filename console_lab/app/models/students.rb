@@ -15,6 +15,9 @@ class Students < ActiveRecord::Base
 	          :length => {:minimum => 4},
 	          :uniqueness => true
 
+	validates_format_of :first_name, :with => /[A-Z][a-z]+/
+	validates_format_of :last_name, :with => /[A-Z][a-z]+/
+
 	FORBIDDEN_USERNAMES = ["Delmer", "Reed", "Elie" , "Schoppik", "Anil" , "Bridgpal", "Tim", "Licata"]
 	validate :username_is_allowed
 	def username_is_allowed

@@ -74,7 +74,8 @@
 
 Bonus:
 
-1.
+1. validates_format_of :first_name, :with => /[A-Z][a-z]+/
+	validates_format_of :last_name, :with => /[A-Z][a-z]+/
 
 2.
 
